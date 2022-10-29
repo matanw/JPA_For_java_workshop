@@ -6,13 +6,12 @@ import javax.persistence.Persistence;
 import javax.persistence.TypedQuery;
 public class Main {
   public static void main(String[] args) {
-
+    addOneEmployee();
     printAllEmployees();
   }
   private static void addOneEmployee(){
     Employee employee = new Employee();
-    employee.setfName("Dalia");
-    employee.setlName("Abo Sheasha");
+    employee.setName("Matan");
     EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("default");
     EntityManager entityManager = entityManagerFactory.createEntityManager();
     entityManager.getTransaction().begin();
@@ -23,17 +22,29 @@ public class Main {
     System.out.println("ok!");
   }
   private static void printAllEmployees(){
-    EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("default");
-    EntityManager entityManager = entityManagerFactory.createEntityManager();
+    for (Employee e: getAllEmployees()){
+      System.out.println("emp -"+e.getName());
+    }
+  }
 
+  static List<Employee> getAllEmployees(){
+    EntityManagerFactory entityManagerFactory = Persistence.
+        createEntityManagerFactory("default");
+    EntityManager entityManager = entityManagerFactory.createEntityManager();
     TypedQuery<Employee> q = entityManager.createQuery("select e from Employee e", Employee.class);
-    List<Employee> employees = q.getResultList();
+    List<Employee> result = q.getResultList();
     entityManager.close();
     entityManagerFactory.close();
-
-    for (Employee e: employees){
-      System.out.println("e -"+e.getfName());
-    }
-    System.out.println("ok!");
+    return result;
+  }
+  static List<Employee> getAllEmployees2(){
+    EntityManagerFactory entityManagerFactory = Persistence.
+        createEntityManagerFactory("default");
+    EntityManager entityManager = entityManagerFactory.createEntityManager();
+    TypedQuery<Employee> q = entityManager.createQuery("select e from Employee e", Employee.class);
+    List<Employee> result = q.getResultList();
+    entityManager.close();
+    entityManagerFactory.close();
+    return result;
   }
 }
