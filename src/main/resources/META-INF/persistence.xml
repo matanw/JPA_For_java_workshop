@@ -5,7 +5,11 @@
     version="2.2">
   <persistence-unit name="default">
 
-    <class>oneentityexample.Employee</class>
+    <class>oneentityexample.Employee0</class>
+
+    <class>onetomanyexample.Employee</class>
+    <class>onetomanyexample.Manager</class>
+
     <properties>
       <property name="javax.persistence.jdbc.driver" value="org.hsqldb.jdbcDriver"/>
       <property name="javax.persistence.jdbc.url" value="jdbc:hsqldb:file:target/myDB;shutdown=true"/>
