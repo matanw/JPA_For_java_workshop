@@ -9,6 +9,8 @@
 
     <class>onetomanyexample.Employee</class>
     <class>onetomanyexample.Manager</class>
+    <class>manytomanyexample.Student</class>
+    <class>manytomanyexample.Course</class>
 
     <properties>
       <property name="javax.persistence.jdbc.driver" value="org.hsqldb.jdbcDriver"/>

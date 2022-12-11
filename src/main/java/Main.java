@@ -1,4 +1,4 @@
-import onetomanyexample.Runner;
+import manytomanyexample.Runner;
 
 
 public class Main {
