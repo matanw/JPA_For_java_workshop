@@ -11,6 +11,8 @@
     <class>onetomanyexample.Manager</class>
     <class>manytomanyexample.Student</class>
     <class>manytomanyexample.Course</class>
+    <class>onetomanyinverseexample.Employee2</class>
+    <class>onetomanyinverseexample.Manager2</class>
 
     <properties>
       <property name="javax.persistence.jdbc.driver" value="org.hsqldb.jdbcDriver"/>
