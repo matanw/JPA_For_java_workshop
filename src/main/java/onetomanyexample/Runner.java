@@ -9,7 +9,7 @@ import javax.persistence.TypedQuery;
 public class Runner {
   public static void doLogic() {
     addManagerWith2Employee();
- printAllManagerWithEmployeesTryFixIllegal();
+    printAllManagerWithEmployeesFixIllegal();
   }
 
 
@@ -82,7 +82,7 @@ public class Runner {
       }
     }
   }
-  static void printAllManagerWithEmployeesTryFixIllegal(){
+  static void printAllManagerWithEmployeesFixIllegal(){
     EntityManagerFactory entityManagerFactory = Persistence.
         createEntityManagerFactory("default");
     EntityManager entityManager = entityManagerFactory.createEntityManager();

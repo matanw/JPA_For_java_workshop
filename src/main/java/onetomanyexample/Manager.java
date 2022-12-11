@@ -1,6 +1,7 @@
 package onetomanyexample;
 
 import java.util.Set;
+import java.util.SortedSet;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
