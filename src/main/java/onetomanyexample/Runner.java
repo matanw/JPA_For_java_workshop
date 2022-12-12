@@ -8,8 +8,8 @@ import javax.persistence.TypedQuery;
 
 public class Runner {
   public static void doLogic() {
-    addManagerWith2Employee();
-    printAllManagerWithEmployeesFixIllegal();
+    //addManagerWith2Employee();
+    printAllManagerWithEmployeesIllegal();
   }
 
 

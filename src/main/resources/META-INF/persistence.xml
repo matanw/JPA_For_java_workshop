@@ -9,8 +9,10 @@
 
     <class>onetomanyexample.Employee</class>
     <class>onetomanyexample.Manager</class>
+
     <class>manytomanyexample.Student</class>
     <class>manytomanyexample.Course</class>
+
     <class>onetomanyinverseexample.Employee2</class>
     <class>onetomanyinverseexample.Manager2</class>
 

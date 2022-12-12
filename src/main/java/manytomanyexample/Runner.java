@@ -22,7 +22,7 @@ public class Runner {
     Student s2= new Student();
     s2.setName("Dov");
     Course c =new Course();
-    c.setName("sadna");
+    c.setName("Java");
     c.setStudents(new HashSet<Student>(Arrays.asList(s1, s2)));
     EntityManagerFactory entityManagerFactory = Persistence.
         createEntityManagerFactory("default");

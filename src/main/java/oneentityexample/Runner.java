@@ -61,7 +61,8 @@ public class Runner {
     EntityManagerFactory entityManagerFactory = Persistence.
         createEntityManagerFactory("default");
     EntityManager entityManager = entityManagerFactory.createEntityManager();
-    TypedQuery<Employee0> q = entityManager.createQuery("select e from Employee0 e", Employee0.class);
+    TypedQuery<Employee0> q = entityManager.
+        createQuery("select e from Employee0 e", Employee0.class);
     List<Employee0> result = q.getResultList();
     entityManager.close();
     entityManagerFactory.close();
